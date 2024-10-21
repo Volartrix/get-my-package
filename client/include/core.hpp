@@ -21,6 +21,13 @@ typedef struct sysinfo {
 sysinfo_t get_info();
 std::string sysinfo_str(sysinfo_t info);
 
+typedef struct package_info {
+    std::string package;
+    std::string version; // if its set to "newest" install the newest version
+    std::string mode; // like "install" yk
+    sysinfo_t info;
+    bool use_cache;
+} package_info_t;
 
 }
 }
